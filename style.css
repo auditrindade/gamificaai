@@ -218,6 +218,7 @@ h2 {
 
     /*referencia de posicionamnto*/
     position: relative;
+    margin-bottom: 120px;
 }
 
     
@@ -248,6 +249,9 @@ h2 {
 
 
 #portifolio a {
+    /*ajuste de area do link para clicar*/
+    width: fit-content;
+
     color: white;
 
     font-family: 'Anta';   
@@ -255,5 +259,102 @@ h2 {
 
      /*sobrepor camadas*/
     z-index: 1;
+    transition: 200ms;
 
 }   
+
+#portifolio a:hover{
+    /* dar zoom no elemento*/
+    transform: scale(1.05);
+    /*velocidade da mudanca*/
+    transition: 200ms;
+}
+
+
+#contato{
+    text-align: center;
+
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+
+}
+
+#contato h2 {
+    margin-bottom: 70px;
+}
+
+#contato form {
+    width: 50%;
+
+    margin: 0 auto;
+    padding: 60px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 80px;
+    background-color: var(--roxo-gamifica);
+    color: white;
+    font-family: "Montserrat";
+    font-size: 17px;
+}
+
+.campo{
+    width: 60%;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+}
+
+.campo-descricao {
+    width: 60%;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+}
+
+.campo input {
+    height: 40px;
+
+    color: white;
+    background-color: #351868;
+
+
+    border: none;
+    border-radius: 4px;
+
+    text-indent: 10px;
+
+    outline: none;
+}
+
+.campo-descricao textarea {
+
+    color: white;
+    background-color: #351868;
+
+    border: none;
+    border-radius: 4px;
+
+    outline: none;
+
+    resize: none;
+
+    padding: 10px;
+    
+     }    
+     
+.campo label, .campo-descricao label {
+    margin-bottom: 15px;
+}
