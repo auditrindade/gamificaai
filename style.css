@@ -16,6 +16,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container-grid {
     width: 80%;
     max-width: 1400px;
@@ -43,6 +47,10 @@
 
 header {
     height: 165px;
+}
+
+header button {
+    display: none;
 }
 
 header img {
@@ -98,6 +106,43 @@ header .container-grid {
     font-size: 32px;
 
 }
+.conteudo-banner span {
+    /* quebra linha*/
+    display: block;
+
+    overflow: hidden;
+
+    border-right: 5px solid var(--laranja-gamifica);
+    white-space: nowrap;
+
+    animation: 
+        digitando 2s steps(40, end),
+        cursor 0.75s step-end infinite
+ ;
+
+}
+
+@keyframes digitando {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes cursor {
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--laranja-gamifica);
+    }
+}
+
 
 #sobre {
     display: flex;
@@ -447,3 +492,57 @@ footer .container-grid {
 .icones-redes a:hover {
     color: var(--laranja-gamifica);
 }
+
+/*responsividade*/
+@media screen and (max-width: 1300px) {
+header {
+    position: relative;
+}
+
+header button {
+    width: 50px;
+
+    display: unset;
+
+    background: none;
+    border: none;
+}
+
+header svg {
+    fill: white;
+}
+
+    nav.menu {
+    height: 500px;
+    width: 350px;
+
+    padding: 0px 30px;
+
+    flex-direction: column;
+    justify-content: space-around;
+
+    background-color: #000000da;
+
+    position: absolute;
+    top: 165px;
+    right: 0px;
+ }
+
+ #sobre {
+    padding: 100px 15%;
+ }
+
+ .card {
+    height: 320px;
+    width: 200px;
+ }
+
+ #contato form {
+    width: 75%;
+ }
+
+ }
+
+ @media screen and (max-width: 1080px) {
+    
+ }
