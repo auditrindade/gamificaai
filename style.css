@@ -492,7 +492,9 @@ footer .container-grid {
 .icones-redes a:hover {
     color: var(--laranja-gamifica);
 }
-
+.menu-fechado{
+    display: none;
+}
 /*responsividade*/
 @media screen and (max-width: 1300px) {
 header {
